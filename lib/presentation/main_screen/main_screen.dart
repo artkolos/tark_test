@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tark_test/domain/bloc/filter_ticker_cubit.dart';
 import 'package:tark_test/domain/bloc/tickers_cubit.dart';
 import 'package:tark_test/injectable.dart';
+import 'package:tark_test/presentation/extensions/sizes_ext.dart';
 import 'package:tark_test/presentation/main_screen/widgets/search_filed.dart';
 import 'package:tark_test/presentation/main_screen/widgets/ticker_data_widget.dart';
 
@@ -32,6 +33,7 @@ class _MainScreenState extends State<MainScreen> {
         BlocProvider(create: (context) => _filterTickerBloc),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: const Color(
             0xFF212630,
@@ -47,11 +49,11 @@ class _MainScreenState extends State<MainScreen> {
               0xFF212630,
             ),
           ),
-          body: const Padding(
+          body: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: 20,
+              horizontal: context.sizes.sizeExtraLarge,
             ),
-            child: _Body(),
+            child: const _Body(),
           ),
         ),
       ),
@@ -82,8 +84,8 @@ class _Body extends StatelessWidget {
                             children: mainTickers
                                 .map(
                                   (e) => Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 23,
+                                    padding: EdgeInsets.only(
+                                      top: context.sizes.sizeExtraLarge,
                                     ),
                                     child: TickerDataWidget(
                                       ticker: e,
@@ -104,8 +106,8 @@ class _Body extends StatelessWidget {
                       children: state.tickers
                           .map(
                             (e) => Padding(
-                              padding: const EdgeInsets.only(
-                                top: 23,
+                              padding: EdgeInsets.only(
+                                top: context.sizes.sizeExtraLarge,
                               ),
                               child: TickerDataWidget(
                                 ticker: e,

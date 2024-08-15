@@ -17,6 +17,12 @@ class SearchFiled extends StatelessWidget {
     return TextField(
       onChanged: onChanged,
       cursorColor: Colors.white,
+      style: const TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'Barlow',
+        color: Colors.white,
+      ),
       decoration: InputDecoration(
         hintText: 'Search coin pairs',
         hintStyle: const TextStyle(
@@ -25,8 +31,8 @@ class SearchFiled extends StatelessWidget {
           fontFamily: 'Barlow',
           color: Color(0x4DFFFFFF),
         ),
-        contentPadding: const EdgeInsets.symmetric(
-          vertical: 10,
+        contentPadding: EdgeInsets.symmetric(
+          vertical: context.sizes.sizeMedium,
           horizontal: 24,
         ),
         fillColor: const Color(0xFF29303D),
@@ -34,7 +40,7 @@ class SearchFiled extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(
-              context.sizes.size5x,
+              context.sizes.sizeLarge,
             ),
           ),
           borderSide: const BorderSide(
@@ -44,7 +50,7 @@ class SearchFiled extends StatelessWidget {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(
-              context.sizes.size5x,
+              context.sizes.sizeLarge,
             ),
           ),
           borderSide: const BorderSide(

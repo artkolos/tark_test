@@ -46,7 +46,7 @@ class TickerDataWidget extends StatelessWidget {
                 ],
               ),
               Text(
-                'Vol ${double.tryParse(ticker.close)?.toStringAsFixed(1) ?? ''}M',
+                'Vol ${double.tryParse(ticker.close)?.toStringAsFixed(1).replaceAll('.', ',') ?? ''}M',
                 style: const TextStyle(
                   fontSize: 16,
                   fontFamily: 'Barlow',
@@ -63,7 +63,7 @@ class TickerDataWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                double.tryParse(ticker.close)?.toStringAsFixed(2) ?? '',
+                double.tryParse(ticker.close)?.toStringAsFixed(2).replaceAll('.', ',') ?? '',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
@@ -72,7 +72,7 @@ class TickerDataWidget extends StatelessWidget {
                 ),
               ),
               Text(
-                '${double.tryParse(ticker.close)?.toStringAsFixed(3) ?? ''}\$',
+                '${double.tryParse(ticker.close)?.toStringAsFixed(3).replaceAll('.', ',') ?? ''}\$',
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
@@ -92,7 +92,9 @@ class TickerDataWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(4),
           ),
           child: Text(
-            difference >= 0 ? '+${difference.toStringAsFixed(2)} %' : '${difference.toStringAsFixed(2)} %',
+            difference >= 0
+                ? '+${difference.toStringAsFixed(2).replaceAll('.', ',')} %'
+                : '${difference.toStringAsFixed(2).replaceAll('.', ',')} %',
             style: const TextStyle(
               fontSize: 18,
               fontFamily: 'Barlow',
