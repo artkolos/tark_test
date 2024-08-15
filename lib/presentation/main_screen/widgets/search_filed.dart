@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tark_test/presentation/common/fonts.dart';
 import 'package:tark_test/presentation/extensions/sizes_ext.dart';
 
 class SearchFiled extends StatelessWidget {
@@ -7,6 +8,8 @@ class SearchFiled extends StatelessWidget {
     required this.textController,
     required this.onChanged,
   });
+
+  static const String _HINT_TEXT = 'Search coin pairs';
 
   final TextEditingController textController;
 
@@ -20,20 +23,23 @@ class SearchFiled extends StatelessWidget {
       style: const TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w400,
-        fontFamily: 'Barlow',
+        fontFamily: AppFonts.BARLOW,
         color: Colors.white,
       ),
       decoration: InputDecoration(
-        hintText: 'Search coin pairs',
+        prefixIcon: const Icon(
+          Icons.search_outlined,
+          color: Color(0x33FFFFFF),
+        ),
+        hintText: _HINT_TEXT,
         hintStyle: const TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.w400,
-          fontFamily: 'Barlow',
+          fontFamily: AppFonts.BARLOW,
           color: Color(0x4DFFFFFF),
         ),
         contentPadding: EdgeInsets.symmetric(
           vertical: context.sizes.sizeMedium,
-          horizontal: 24,
         ),
         fillColor: const Color(0xFF29303D),
         filled: true,

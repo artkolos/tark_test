@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tark_test/domain/model/ticker.dart';
+import 'package:tark_test/presentation/common/fonts.dart';
 
 class TickerDataWidget extends StatelessWidget {
   const TickerDataWidget({
@@ -30,7 +31,7 @@ class TickerDataWidget extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       fontSize: 22,
                       color: Colors.white,
-                      fontFamily: 'TitilliumWeb',
+                      fontFamily: AppFonts.TITILLIUM_WEB,
                     ),
                   ),
                   Text(
@@ -39,7 +40,7 @@ class TickerDataWidget extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
                       color: Color(0x66FFFFFF),
-                      fontFamily: 'TitilliumWeb',
+                      fontFamily: AppFonts.TITILLIUM_WEB,
                     ),
                     textAlign: TextAlign.end,
                   ),
@@ -49,7 +50,7 @@ class TickerDataWidget extends StatelessWidget {
                 'Vol ${double.tryParse(ticker.close)?.toStringAsFixed(1).replaceAll('.', ',') ?? ''}M',
                 style: const TextStyle(
                   fontSize: 16,
-                  fontFamily: 'Barlow',
+                  fontFamily: AppFonts.BARLOW,
                   fontWeight: FontWeight.w500,
                   color: Color(0x66FFFFFF),
                 ),
@@ -67,7 +68,7 @@ class TickerDataWidget extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
-                  fontFamily: 'Barlow',
+                  fontFamily: AppFonts.BARLOW,
                   color: difference >= 0 ? const Color(0xFF2DBD85) : const Color(0xFFE44358),
                 ),
               ),
@@ -76,7 +77,7 @@ class TickerDataWidget extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
-                  fontFamily: 'Barlow',
+                  fontFamily: AppFonts.BARLOW,
                   color: Color(0x66FFFFFF),
                 ),
               ),
@@ -97,7 +98,7 @@ class TickerDataWidget extends StatelessWidget {
                 : '${difference.toStringAsFixed(2).replaceAll('.', ',')} %',
             style: const TextStyle(
               fontSize: 18,
-              fontFamily: 'Barlow',
+              fontFamily: AppFonts.BARLOW,
               fontWeight: FontWeight.w600,
               color: Colors.white,
             ),
