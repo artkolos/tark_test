@@ -1,0 +1,15 @@
+include: package:flutter_lints/flutter.yaml
+linter:
+  rules:
+    - require_trailing_commas
+
+analyzer:
+  exclude:
+    - lib/gen/**
+    - lib/**.g.dart
+
+  errors:
+    missing_return: error
+    missing_required_param: error
+    unnecessary_string_escapes: ignore
+    constant_identifier_names: ignore

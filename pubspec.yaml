@@ -1,0 +1,74 @@
+name: tark_test
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Code Generation
+  freezed: ^2.4.5
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.8.1
+
+  # UI
+  google_fonts: ^5.1.0
+  eva_icons_flutter: ^3.1.0
+
+  # DI
+  get_it: ^7.2.0
+  injectable: ^2.3.2
+  injectable_generator: ^2.4.1
+
+  # Architecture
+  bloc: ^8.1.2
+  flutter_bloc: ^8.1.3
+
+  cupertino_icons: ^1.0.6
+  web_socket_channel: ^3.0.1
+  dio: ^5.6.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
+flutter_test:
+  sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
+  json_serializable: ^6.7.0
+  injectable_generator: ^2.4.1
+flutter:
+
+  uses-material-design: true
+  fonts:
+    - family: Barlow
+      fonts:
+        - asset: assets/fonts/barlow/Barlow-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/barlow/Barlow-Light.ttf
+          weight: 300
+        - asset: assets/fonts/barlow/Barlow-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/barlow/Barlow-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/barlow/Barlow-Bold.ttf
+          weight: 600
+        - asset: assets/fonts/barlow/Barlow-ExtraBold.ttf
+          weight: 700
+    - family: TitilliumWeb
+      fonts:
+        - asset: assets/fonts/titilliumweb/TitilliumWeb-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/titilliumweb/TitilliumWeb-Light.ttf
+          weight: 300
+        - asset: assets/fonts/titilliumweb/TitilliumWeb-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/titilliumweb/TitilliumWeb-SemiBold.ttf
+          weight: 500
+        - asset: assets/fonts/titilliumweb/TitilliumWeb-Bold.ttf
+          weight: 600
+
